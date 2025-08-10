@@ -1,31 +1,47 @@
 {
-  "name": "my-portfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "vite"
-  },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@mui/icons-material": "^5.15.18",
-    "@mui/material": "^5.15.18",
-    "@mui/system": "^5.15.18",
-    "firebase": "^10.12.3",
+    "@mui/icons-material": "^5.15.20",
+    "@mui/material": "^5.15.20",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-swipeable-views": "^0.14.0",
-    "react-tsparticles": "^2.12.2",
-    "tsparticles": "^2.12.2"
+    "react-scripts": "5.0.1",
+    "react-swipeable-views": "^0.14.0"
   },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.1",
-    "vite": "^5.2.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "vercel-build": "npm run build"
   },
-  "engines": {
-    "node": ">=18.0.0"
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "vercel": {
+    "rewrites": [
+      {
+        "source": "/(.*)",
+        "destination": "/index.html"
+      }
+    ]
   }
 }
